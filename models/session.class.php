@@ -32,5 +32,24 @@ class Session
         return $result;
 
     }
+    
+     public function refresh($name)
+    {
+
+        $pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
+
+        foreach ($_SESSION as $key => $value) {
+           
+            if($key == $name && isset($key))
+            {
+                if ($pageWasRefreshed) 
+                {
+                unset($_SESSION[$key]);
+                }
+            }
+        }
+
+    
+    }
 
 }
