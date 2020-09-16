@@ -5,6 +5,7 @@ MVC STRUCTRUE
 
 
 * Included PHP MAILER V.6.1.7 
+* Bootstrap assets integration V.4.0.0
 * Class of FORM VALIDATION
 * Class of Routing links easy way 
   - Example : $route->routing('page', 'homepage');
