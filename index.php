@@ -8,7 +8,7 @@ $action = MAINPAGE;
 if (isset($_GET['controller']) && isset($_GET['action'])) {
 
     $controller = $_GET['controller'];
-    (DEV_MODE == true) ? $action = MAINPAGE : $action = $_GET['action'];
+    (DEV_MODE != true) ? $action = MAINPAGE : $action = $_GET['action'];
 
 }
 
